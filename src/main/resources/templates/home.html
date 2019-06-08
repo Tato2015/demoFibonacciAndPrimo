@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Hello World</h1>
+	
+	<form th:object="${numero}" th:action="@{/form}" method="post">
+		<label>Ingrese n�mero</label>
+			<input type="text"  th:field="*{numeroIngreso}"/>
+		<input type="submit" th:value="Procesar" />
+		
+		<label>Suma Fibonacci</label>
+		<input type="text"  th:field="*{sumaFibonacci}"/>
+		
+		<label>Suma Primos</label>
+		<input type="text"  th:field="*{sumaPrimos}"/>
+	</form>
+
+</body>
+</html>
