@@ -14,7 +14,10 @@ public class Numero {
 	private int sumaFibonacci;
 	
 	private int sumaPrimos;
-		
+	
+	private int arrayFibonacci[];
+	
+	private int arrrayPrimos[];
 
 	public int getNumeroIngreso() {
 		return numeroIngreso;
@@ -48,8 +51,21 @@ public class Numero {
 		this.id = id;
 	}
 
+	public int[] getArrayFibonacci() {
+		return arrayFibonacci;
+	}
 
-	
+	public void setArrayFibonacci(int[] arrayFibonacci) {
+		this.arrayFibonacci = arrayFibonacci;
+	}
+
+	public int[] getArrrayPrimos() {
+		return arrrayPrimos;
+	}
+
+	public void setArrrayPrimos(int[] arrrayPrimos) {
+		this.arrrayPrimos = arrrayPrimos;
+	}
 	
 	
 }

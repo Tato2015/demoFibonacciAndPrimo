@@ -7,17 +7,22 @@ import org.springframework.stereotype.Service;
 @Service
 public class NumeroImpl {
 	Numero num = new Numero();
+	
 	private final Logger log = LoggerFactory.getLogger(getClass());
 	
 	public void mostarSerieFibonacci(int cantidad) {
-		int suma=0;		
+		int suma=0;
+		int array[]=new int[cantidad];
 		System.out.println("FIBONACCI");
 		for(int i=0;i<cantidad;i++) {
 //			System.out.print(procesaFibonacci(i)+" + ");
-			log.info(procesaFibonacci(i)+" + ");
-			suma += procesaFibonacci(i);			
+			log.info(procesaFibonacci(i)+" + ");						
+			suma += procesaFibonacci(i);
+			array[i] = procesaFibonacci(i);
+			log.info("Array "+i+" : "+array[i]+" + ");
 		}
 		this.num.setSumaFibonacci(suma);
+		this.num.setArrayFibonacci(array);	
 	}
 
 	public int procesaFibonacci(int numero) {
@@ -42,14 +47,17 @@ public class NumeroImpl {
 		int p = 2;
 		int d = 2;
 		int suma = 0;
+		int array[] = new int[cantidad];
 		System.out.println("NUMERO PRIMOS");
 		while (c <= n) {
 		   if (p % d == 0) {
 		      if (p == d) {
 //		         System.out.print(p + ", ");
 		         log.info(p + ", ");
+		         array[c-1]=p;
+		         log.info("Array "+(c-1)+" : "+array[c-1]+" + ");
 		         c++;
-		         suma+=p;
+		         suma+=p;		         
 		      }
 		      d = 2;
 		      p++;
@@ -57,6 +65,7 @@ public class NumeroImpl {
 		   else
 		      d++;
 		}
+		this.num.setArrrayPrimos(array);
 		this.num.setSumaPrimos(suma);
 	}
 	

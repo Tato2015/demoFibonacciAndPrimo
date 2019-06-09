@@ -6,17 +6,19 @@
 </head>
 <body>
 	<h1>Hello World</h1>
-	
+
 	<form th:object="${numero}" th:action="@{/form}" method="post">
-		<label>Ingrese n�mero</label>
-			<input type="text"  th:field="*{numeroIngreso}"/>
-		<input type="submit" th:value="Procesar" />
+		<label>Ingrese n�mero</label> <input type="text"
+			th:field="*{numeroIngreso}" /> <input type="submit"
+			th:value="Procesar" /> <label>Suma Fibonacci</label> <input
+			type="text" th:field="*{sumaFibonacci}" /> <label>Suma Primos</label>
+		<input type="text" th:field="*{sumaPrimos}" />
+
+
 		
-		<label>Suma Fibonacci</label>
-		<input type="text"  th:field="*{sumaFibonacci}"/>
 		
-		<label>Suma Primos</label>
-		<input type="text"  th:field="*{sumaPrimos}"/>
+		<input th:text="${arrayFibonacci[0]}"/>			
+		
 	</form>
 
 </body>

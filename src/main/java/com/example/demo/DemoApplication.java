@@ -1,8 +1,5 @@
 package com.example.demo;
 import java.util.Map;
-
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -28,6 +25,14 @@ public class DemoApplication {
 	public String getHome(Map<String, Object> model) {
 		Numero numero= new Numero();
 		model.put("numero", numero);
+		
+		String[] continents = {
+		          "Africa", "Antarctica", "Asia", "Australia", 
+		          "Europe", "North America", "Sourth America"
+		        };
+		         
+		        model.put("continents", continents);
+		
 		return "home";
 	}
 	
