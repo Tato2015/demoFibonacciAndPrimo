@@ -15,9 +15,11 @@ public class Numero {
 	
 	private int sumaPrimos;
 	
+
 	private String cadenaFibonacci;
 	
 	private String cadenaPrimo;
+
 
 	public int getNumeroIngreso() {
 		return numeroIngreso;
@@ -67,7 +69,6 @@ public class Numero {
 		this.cadenaPrimo = cadenaPrimo;
 	}
 
-	
 	
 	
 }

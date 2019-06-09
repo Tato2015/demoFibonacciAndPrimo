@@ -31,7 +31,6 @@ public class DemoApplication {
 	@RequestMapping(value="/form", method = RequestMethod.POST)
 	public String getProceso(Model model,@ModelAttribute("numero") Numero numero, 
 			BindingResult result) {
-		
 //		model.addAttribute("numero",new Numero());
 		numeroImpl.mostarSerieFibonacci(numero.getNumeroIngreso());
 		numero.setSumaFibonacci(numeroImpl.getNum().getSumaFibonacci());		

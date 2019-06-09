@@ -13,16 +13,17 @@ public class NumeroImpl {
 	public void mostarSerieFibonacci(int cantidad) {
 		int suma=0;
 		String cadena="";
+
 		System.out.println("FIBONACCI");
 		for(int i=0;i<cantidad;i++) {
 //			System.out.print(procesaFibonacci(i)+" + ");
 			log.info(procesaFibonacci(i)+" + ");						
 			suma += procesaFibonacci(i);
+
 			cadena += " + "+procesaFibonacci(i);
 		}
 		this.num.setCadenaFibonacci(cadena);
 		this.num.setSumaFibonacci(suma);
-	
 	}
 
 	public int procesaFibonacci(int numero) {
@@ -48,6 +49,7 @@ public class NumeroImpl {
 		int d = 2;
 		int suma = 0;
 		String cadena = "";
+
 		System.out.println("NUMERO PRIMOS");
 		while (c <= n) {
 		   if (p % d == 0) {
